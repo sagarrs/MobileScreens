@@ -18,9 +18,17 @@ export default class App extends React.Component {
         <Text style={styles.txt}>
           <Text>An OTP has been sent by sms to </Text>
           <Text style={{fontWeight: "bold"}}>+91 8892275735</Text>
-          <Text> for verification</Text>
+          <Text> for verification</Text>{"\n"}{"\n"}
+          <Text style = {{ flex: 1, marginBottom: 10 }}>
+          </Text>
         </Text>
-      </View> 
+        <View style={{ borderBottomColor: 'black', borderBottomWidth: 1, marginRight: 290, marginLeft: 30 }}/>
+        <View style={{ borderBottomColor: 'black', borderBottomWidth: 1, marginRight: 290, marginLeft: 30 }}/>
+        <Text style={styles.txt2}>
+            <Text>Not Recieved ? </Text>
+            <Text style={{color: '#0277bd'}}>Resend OTP</Text>
+        </Text>
+      </View>
     );
   }
 }
@@ -44,13 +52,19 @@ const styles = StyleSheet.create({
     // marginBottom: 300
   },
   txt: {
-    flex: 1,
-    paddingTop: 50,
-    paddingBottom: 150, 
+    // flex: 1,
+    paddingTop: 40, 
     paddingLeft: 30,
     paddingRight: 30,
     fontSize: 20,
     fontWeight: "100",
     fontFamily: 'sans-serif-thin'
+  },
+  txt2: {
+    paddingBottom: 200,
+    paddingLeft: 70,
+    fontSize: 16,
+    fontWeight: "100",
+    fontFamily: 'sans-serif-thin',
   }
 });
